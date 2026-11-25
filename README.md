@@ -63,3 +63,7 @@ The canonical/share links use `https://0xroachyeth.github.io`. When you get a cu
 ## Text to fill in
 
 Search the HTML for `placeholder` or `[`. Those spots show in gold on the page until you replace them.
+
+## The 7-Day Sunrise Reset
+
+The Reset lives at `/reset/` (all 7 days on one page, anchors `#day-1`…`#day-7`). Signing up on the home page sends the email to Formspree and then opens `/reset/#day-1`. Edit the days directly in `reset/index.html`. When you change `assets/style.css` or `assets/site.js`, bump the `?v=` number in the HTML links so browsers load the new file.

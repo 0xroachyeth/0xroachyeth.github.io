@@ -341,3 +341,14 @@ td.name { color: var(--text); font-weight: 500; }
 .avatar { align-items: center; }
 .avatar img { width: 40px; height: 68px; }
 .intro .tagline { font-family: var(--fell-italic); font-style: italic; font-size: 22px; color: var(--ochre); margin-top: -8px; }
+
+/* 7-Day Sunrise Reset page */
+.day-jump { display: flex; flex-wrap: wrap; gap: 8px; }
+.day-jump a { font-family: var(--mono); width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line-3); border-radius: 999px; color: var(--text); text-decoration: none; }
+.day-jump a:hover { border-color: var(--accent); color: var(--accent); }
+.reset-day { display: flex; flex-direction: column; gap: 14px; scroll-margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--line); }
+.reset-day .h2 { font-size: clamp(26px, 4vw, 34px); margin: 0; }
+.reset-day p { font-size: 18px; line-height: 1.7; color: var(--text-2); margin: 0; }
+.reset-day .why, .reset-day .easy { font-size: 16px; color: var(--muted); }
+.reset-day .mono, .reset-box .label { color: var(--accent); font-size: 12px; letter-spacing: .1em; margin-right: 6px; }
+.reset-box p a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; }

@@ -46,6 +46,11 @@ const EXP003_START = "";
         const res = await fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
+        if (form.dataset.form === "reset") {
+          say("You're in. Opening Day 1…", "ok");
+          setTimeout(() => { location.href = "/reset/#day-1"; }, 1200);
+          return;
+        }
         say(form.dataset.form === "walk" ? "Got it. I'll get back to you soon." : form.dataset.form === "grove" ? "You're on the list. I'll let you know when The Grove opens." : "You're on the list.", "ok");
       } catch (err) {
         say("That didn't go through. Please try again in a minute.", "warn");
