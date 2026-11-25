@@ -333,3 +333,11 @@ td.name { color: var(--text); font-weight: 500; }
 .reset-box p { margin: 0; font-size: 17px; line-height: 1.6; color: var(--muted); }
 .reset-box .form-inline { margin-top: 8px; flex: none; }
 @media (max-width: 600px) { .reset-box { padding: 28px 22px; } }
+
+/* Seed of light brand (locked 2026-11-22) */
+:root { --ochre: #D3A12B; --ivory: #F1E6CC; --fell: "IM Fell English SC", Georgia, serif; --fell-italic: "IM Fell English", Georgia, serif; }
+.brand .brand-mark { width: 22px; height: 38px; flex: none; }
+.brand-name { font-family: var(--fell); font-stretch: normal; font-weight: 400; font-size: 24px; letter-spacing: .02em; text-transform: none; }
+.avatar { align-items: center; }
+.avatar img { width: 40px; height: 68px; }
+.intro .tagline { font-family: var(--fell-italic); font-style: italic; font-size: 22px; color: var(--ochre); margin-top: -8px; }
