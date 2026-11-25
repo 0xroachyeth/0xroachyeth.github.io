@@ -352,3 +352,4 @@ td.name { color: var(--text); font-weight: 500; }
 .reset-day .why, .reset-day .easy { font-size: 16px; color: var(--muted); }
 .reset-day .mono, .reset-box .label { color: var(--accent); font-size: 12px; letter-spacing: .1em; margin-right: 6px; }
 .reset-box p a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+.entry-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 13px; color: var(--accent); }

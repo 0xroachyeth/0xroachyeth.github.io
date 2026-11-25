@@ -154,6 +154,7 @@ const EXP003_START = "";
           (e.sunrise ? "<span>Sunrise " + esc(e.sunrise) + "</span>" : "") +
           (e.outside ? "<span>Outside " + esc(e.outside) + "</span>" : "") + "</div>" +
         (e.note ? '<p class="entry-note">' + esc(e.note) + "</p>" : "") +
+        (e.link && /^https:\/\//.test(e.link) ? '<a class="entry-link" href="' + esc(e.link) + '" rel="noopener">See it on X ↗</a>' : "") +
         (e.photo ? '<img src="' + esc(e.photo) + '" alt="' + esc(e.alt || "Sunrise, day " + day) + '" loading="lazy">' : "") +
       "</div></article>";
   }

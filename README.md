@@ -31,6 +31,7 @@ Open `data/log.json` and add one entry inside the `[ ]`. Newest or oldest first 
 
 - Put a comma between entries.
 - `photo` and `alt` are optional. Put photos in `assets/log/`.
+- `link` is optional: the full https link to that day's X post (shows "See it on X ↗").
 - The home page strip, the streak counts and the EXP-003 progress bar all update from this file.
 - Each entry gets its own link, `/log/#day-N`, that you can share on X.
 
