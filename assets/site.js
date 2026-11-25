@@ -5,7 +5,8 @@
 // Until these are filled in, forms say honestly that signups aren't open yet.
 const FORM_ENDPOINTS = {
   reset: "",     // 7-Day Sunrise Reset email signup
-  coaching: ""   // Coaching inquiry form
+  walk: "",     // "Walk with me" one-on-one inquiry form
+  grove: ""     // The Grove community waitlist
 };
 // The day EXP-003 (30 days outside before sunrise) started, YYYY-MM-DD.
 // Leave empty until you start; progress then counts log entries from that date.
@@ -41,7 +42,7 @@ const EXP003_START = "";
         const res = await fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
         if (!res.ok) throw new Error(String(res.status));
         form.reset();
-        say(form.dataset.form === "coaching" ? "Got it. I'll get back to you soon." : "You're on the list.", "ok");
+        say(form.dataset.form === "walk" ? "Got it. I'll get back to you soon." : form.dataset.form === "grove" ? "You're on the list. I'll let you know when The Grove opens." : "You're on the list.", "ok");
       } catch (err) {
         say("That didn't go through. Please try again in a minute.", "warn");
       } finally {

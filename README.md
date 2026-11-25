@@ -40,10 +40,10 @@ At the top of `assets/site.js`, set `EXP003_START` to the first day, for example
 
 ## Turn on the forms
 
-The signup and coaching forms need a free form service. Here's how with Formspree (free tier):
+The signup, "Walk with me" and Grove waitlist forms need a free form service. Here's how with Formspree (free tier):
 
-1. Make an account at formspree.io and create two forms ("Sunrise Reset" and "Coaching").
-2. Paste their URLs into `FORM_ENDPOINTS` at the top of `assets/site.js`.
+1. Make an account at formspree.io and create three forms ("Sunrise Reset", "Walk with me" and "Grove waitlist").
+2. Paste their URLs into `FORM_ENDPOINTS` (`reset`, `walk`, `grove`) at the top of `assets/site.js`.
 
 Until then, the forms honestly say "Signups open soon."
 
