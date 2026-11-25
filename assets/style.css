@@ -9,14 +9,14 @@
   --text: #EDE8DF;
   --text-2: #B9C0C8;
   --muted: #9AA3AE;
-  --accent: #FF7A1A;
-  --accent-hover: #FF8A33;
+  --accent: #D3A12B;   /* Seed of light ochre */
+  --accent-hover: #E0B44A;
   --day: #F3EEE6;
   --day-2: #E2DBD0;
   --ink: #14161A;
   --ink-2: #3A3F47;
   --ink-3: #4A4F57;
-  --day-link: #B4470A;
+  --day-link: #7E5B0E;
   --strong: #8FD19E;
   --emerging: #F2C14E;
   --n1: #9AB8FF;
