@@ -42,8 +42,8 @@ At the top of `assets/site.js`, set `EXP003_START` to the first day, for example
 
 The signup, "Walk with me" and Grove waitlist forms need a free form service. Here's how with Formspree (free tier):
 
-1. Make an account at formspree.io and create three forms ("Sunrise Reset", "Walk with me" and "Grove waitlist").
-2. Paste their URLs into `FORM_ENDPOINTS` (`reset`, `walk`, `grove`) at the top of `assets/site.js`.
+1. Make an account at formspree.io and create ONE form (e.g. "Website").
+2. Paste its URL into `FORM_URL` at the top of `assets/site.js`. All three forms send to it; each email says which list it came from (sunrise-reset, walk-with-me, grove-waitlist). To split them later, fill `FORM_ENDPOINTS` (`reset`, `walk`, `grove`).
 
 Until then, the forms honestly say "Signups open soon."
 

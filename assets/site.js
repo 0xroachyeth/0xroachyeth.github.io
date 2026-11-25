@@ -1,8 +1,12 @@
 /* Ethan Roach site script: menu, forms, and the Sunrise Log. */
 
 // ---- Settings you edit -------------------------------------------------
-// Paste your Formspree form URLs here (https://formspree.io/f/xxxxxxx).
-// Until these are filled in, forms say honestly that signups aren't open yet.
+// Paste ONE Formspree form URL here (https://formspree.io/f/xxxxxxx) and all
+// three forms send to it. Each signup carries a "list" field (sunrise-reset,
+// walk-with-me, grove-waitlist) so you can tell them apart in your inbox.
+// Until it's filled in, forms say honestly that signups aren't open yet.
+const FORM_URL = "";
+// Optional: give a form its own URL to override FORM_URL for that form.
 const FORM_ENDPOINTS = {
   reset: "",     // 7-Day Sunrise Reset email signup
   walk: "",     // "Walk with me" one-on-one inquiry form
@@ -29,7 +33,7 @@ const EXP003_START = "";
     const status = form.querySelector(".form-status");
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const endpoint = FORM_ENDPOINTS[form.dataset.form];
+      const endpoint = FORM_ENDPOINTS[form.dataset.form] || FORM_URL;
       const say = (msg, cls) => { if (status) { status.textContent = msg; status.className = "form-status " + (cls || ""); } };
       if (!endpoint) {
         say("Signups open soon. This form isn't connected yet.", "warn");
