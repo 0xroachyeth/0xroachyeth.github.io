@@ -5,7 +5,7 @@
 // three forms send to it. Each signup carries a "list" field (sunrise-reset,
 // walk-with-me, grove-waitlist) so you can tell them apart in your inbox.
 // Until it's filled in, forms say honestly that signups aren't open yet.
-const FORM_URL = "";
+const FORM_URL = "https://formspree.io/f/xrpqjonb";
 // Optional: give a form its own URL to override FORM_URL for that form.
 const FORM_ENDPOINTS = {
   reset: "",     // 7-Day Sunrise Reset email signup
