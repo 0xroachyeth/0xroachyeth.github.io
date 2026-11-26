@@ -13,8 +13,8 @@ const FORM_ENDPOINTS = {
   grove: ""     // The Grove community waitlist
 };
 // The day EXP-003 (30 days outside before sunrise) started, YYYY-MM-DD.
-// Leave empty until you start; progress then counts log entries from that date.
-const EXP003_START = "";
+// Progress shows the highest Sunrise Log day number logged since this date.
+const EXP003_START = "2026-11-12";
 // ------------------------------------------------------------------------
 
 (function () {
@@ -109,7 +109,9 @@ const EXP003_START = "";
       // EXP-003 progress
       const prog = document.querySelector("[data-log=progress]");
       if (prog) {
-        const done = EXP003_START ? Math.min(30, entries.filter((e) => e.date >= EXP003_START).length) : 0;
+        // Progress = highest logged day number since the start (falls back to a count of entries).
+        const since = EXP003_START ? entries.filter((e) => e.date >= EXP003_START) : [];
+        const done = Math.min(30, since.reduce((m, e) => Math.max(m, Number(e.day) || 0), 0) || since.length);
         const cells = prog.querySelector(".progress");
         if (cells) cells.innerHTML = Array.from({ length: 30 }, (_, i) => '<span class="' + (i < done ? "on" : "") + '"></span>').join("");
         document.querySelectorAll("[data-k=exp-day]").forEach((el) => {
