@@ -353,3 +353,33 @@ td.name { color: var(--text); font-weight: 500; }
 .reset-day .mono, .reset-box .label { color: var(--accent); font-size: 12px; letter-spacing: .1em; margin-right: 6px; }
 .reset-box p a { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; }
 .entry-link { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 13px; color: var(--accent); }
+
+/* The Why page (hypotheses behind the rhythms) */
+:root { --hyp: #C7A4F0; }
+.ev-hyp { color: var(--hyp); }
+.chip-hyp { border-color: #3E3354; color: var(--hyp); }
+.why-page .prose a, .why-src a, .why-row a { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; }
+.why-section { display: flex; flex-direction: column; gap: 20px; scroll-margin-top: 96px; }
+.chain { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.chain-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 700px) { .chain, .chain-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.chain li { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.chain .t { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+.chain .n { font-weight: 600; font-size: 16px; }
+.chain p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.chain-note { margin: 0; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.why-item { background: var(--bg-2); border: 1px solid var(--line); border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px; scroll-margin-top: 96px; }
+.why-item .h2 { font-size: clamp(28px, 3.4vw, 36px); }
+.why-rows { display: flex; flex-direction: column; border-top: 1px solid var(--line-2); }
+.why-row { display: flex; flex-wrap: wrap; gap: 6px 24px; padding: 16px 0; border-bottom: 1px solid var(--line-2); }
+.why-k { flex: 0 0 170px; font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); padding-top: 5px; }
+.why-row p { flex: 1 1 320px; min-width: 0; margin: 0; font-size: 16px; line-height: 1.65; color: var(--text-2); }
+.why-src { margin: 0; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.reading { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line-2); }
+.reading li { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 16px 0; border-bottom: 1px solid var(--line-2); }
+.reading .n { flex: 0 0 200px; font-weight: 600; }
+.reading p { flex: 1 1 320px; min-width: 0; margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-2); }
+.map-box { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+.map-box p { margin: 0; font-size: 16px; line-height: 1.65; color: var(--text-2); }
+.map-box .fine { font-size: 13px; color: var(--muted); }
+@media (max-width: 600px) { .why-item, .map-box { padding: 22px 18px; } .why-k, .reading .n { flex-basis: 100%; } }
